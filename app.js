@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); //Manejo variables de entorno
 const Server = require('./models/server');
 
 
