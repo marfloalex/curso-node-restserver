@@ -30,7 +30,9 @@ router.put('/:id',[
 
 router.patch('/',usuariosPatch);
 
-router.delete('/:id',usuariosDelete);
+router.delete('/:id',[check('id','No es un ID valido').isMongoId(),
+check('id').custom(existeUsuarioPorId),
+validarCampos],usuariosDelete);
 
 router.get('/json',usuariosGetJson);
 
