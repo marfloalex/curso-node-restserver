@@ -91,7 +91,6 @@ const usuariosDelete=async (req, res=response)=> {
 
 const usuariosGetJson=(req, res=response)=> {
    
-    
     res.json({}
 
     )
